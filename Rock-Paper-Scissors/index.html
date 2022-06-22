@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schere,Stein oder Papier?</title>
+</head>
+<body>
+    
+
+
+<script>
+
+
+for (let i = 0; i < 5; i++) {
+   if (i == 0) {
+    alert("Round 1")
+   }
+
+  else if (i >= 1) {
+    alert("Round " + (i+1))
+    
+  }
+
+
+
+/* eine Prompt wird geöffnent und speichert den Wert auf myPlay weiter und durch .toUpperCase wird der wert in GROßBUSTABEN UMGEWANDELT */
+let myPlay = prompt("Wähle zwischen: Schere,Stein oder Papier").toUpperCase()
+
+/* Generiert eine Zahl zwischen 1 - 3 */
+let computerPlay = Math.floor(Math.random() * 3 ) +1 
+
+
+
+/* Wenn computerPlay eine 1 generiert wird 1 zu einem string namens: "SCHERE" , 2 zu "PAPIER" 3 zu "STEIN" */
+if (computerPlay == 1) {
+    computerPlay = "SCHERE"
+
+    
+} else if (computerPlay == 2){
+    computerPlay = "PAPIER"
+}
+
+else computerPlay = "STEIN"
+
+
+/* Diese Funktion spielt alle 9 optionen aus die im Spiel vortreten können und gibt jewals dann den Sieger an */
+ function playRound(myPlay,computerPlay) {
+    
+    if (myPlay == "PAPIER" && computerPlay =="STEIN" ) {
+        
+        alert("You win, Papier beats Rock")
+    }    
+    else if (myPlay == "PAPIER" && computerPlay == "SCHERE") {
+
+        alert("You lose, Papier loses against Scissors")
+    } 
+
+    else if (myPlay == "STEIN" && computerPlay == "SCHERE") {
+
+        alert("You win, Stone beats Scissors")    
+    }
+
+    else if (myPlay == "STEIN" && computerPlay == "PAPIER") {
+        
+        alert("You lose, Stone loses against Paper")    
+    }
+
+    else if (myPlay == "SCHERE" && computerPlay == "PAPIER") {
+
+        alert("You win, Scissors beats Paper")    
+    }
+
+    else if (myPlay == "SCHERE" && computerPlay == "STEIN") {
+        alert("You lose, Scissors loses against Stone")
+    }
+
+    else if (myPlay == "PAPIER" && computerPlay == "PAPIER") {
+        alert("Tie, both of you chose Paper")
+    }
+
+    else if (myPlay == "STEIN" && computerPlay == "STEIN") {
+        alert("Tie, both of you chose Stone")   
+    }
+
+    else if (myPlay == "SCHERE" && computerPlay == "SCHERE") {
+        alert("Tie, both of you chose Scissors")
+    }
+
+    else alert("Input Error, You HAVE to use Scissor,Paper or Stone")
+
+}
+
+playRound(myPlay,computerPlay)
+
+}
+</script>
+
+
+
+
+
+</body>
+</html>

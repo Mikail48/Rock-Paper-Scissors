@@ -1,0 +1,83 @@
+
+Schere,Stein, Papier gegen den Computer:
+
+Der Computer nimmt random einer dieser 3 möglichkeiten und vergleicht das resultat mit dem was wir gewählt haben.
+
+Schere schlägt Papier
+Papier schlägt Stein
+Stein schlägt Schere
+
+Bei gleicher wahl gilt es als unentschieden und ein text mit "unentschieden versuche es nochmal!" erscheint.
+
+Bei einem Sieg ein text mit "Du gewinnst **** schlägt ****"
+
+Bei einer Niederlage ein text mit "Du verlierst **** schlägt ****"
+
+TYP
+1 = Schere 
+2 = Papier
+3 = Stein
+
+
+
+1.
+Eine random zahl zwischen 1 - 3 erzeugen.
+Die Zahl als jewaligen TYP speichern.
+
+2.
+Alle optionen aufmachen und dann als if else funktion einstellen.
+
+Papier = Papier
+Papier > Stein OK
+Papier < Schere OK
+
+Stein = Stein 
+Stein > Schere ok
+Stein < Papier ok
+
+Schere = Schere
+Schere > Papier ok
+Schere < Stein ok
+
+funktion spielRunde(meineWahl,computerWahl) {
+    wenn (meineWahl == "Papier" && computerWahl == "Stein") {
+        console.log("Du gewinnst papier besiegt Stein")
+    }
+
+else wenn usw....
+}
+
+
+
+
+Funktion erstellen die eine Prompt anfrage macht und dein TYP zu wählen diesen mit dem computerPlay vergleichen und daraufhin den Sieger 
+deklerieren und dass ist einen loop bist jewals ein spieler 5 mal gewonnen hat und daraufhin der sieger deklerieren mit der Punktzahl.
+
+1.
+Prompt funktion erstellen.
+
+in der Prompt den string angeben der case insenstive ist und mit dem string vom computer vergleicht.Alle
+
+1.1 Prompt definiert den string und wandelt ihn in UPPERCASE um.
+
+
+2. Spiel loopen bis ein spieler 5 siege erreicht. Im abschluss den Score anzeigen und den Sieger ernennen.Alle
+
+for (let i = 0; i < 5; i++) {
+    
+
+
+ }
+
+
+
+
+
+
+
+Was muss ich loopen?
+
+-Prompt anfrage
+-Math.random
+-play funktion
+
