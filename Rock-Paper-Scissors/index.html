@@ -12,21 +12,24 @@
 
 <script>
 
+alert("The Player to win 5 times, " + "wins the Game!")    
 
-for (let i = 0; i < 5; i++) {
-   if (i == 0) {
-    alert("Round 1")
-   }
+let gegnerPunkt = 0
+let meinPunkt   = 0
+let i = 0 
+for (let i = 0 ; meinPunkt < 5; i++) {
 
-  else if (i >= 1) {
-    alert("Round " + (i+1))
+/* Bricht bei 5 punkt den Loop */
+if (gegnerPunkt === 5) break; 
     
-  }
+/* Zeigt die Spiel-Runde an */
+alert("Round " + (i + 1))
+ 
 
 
 
 /* eine Prompt wird geöffnent und speichert den Wert auf myPlay weiter und durch .toUpperCase wird der wert in GROßBUSTABEN UMGEWANDELT */
-let myPlay = prompt("Wähle zwischen: Schere,Stein oder Papier").toUpperCase()
+let myPlay = prompt("Choose between: Scissors,Stone or Paper").toUpperCase()
 
 /* Generiert eine Zahl zwischen 1 - 3 */
 let computerPlay = Math.floor(Math.random() * 3 ) +1 
@@ -48,47 +51,75 @@ else computerPlay = "STEIN"
 /* Diese Funktion spielt alle 9 optionen aus die im Spiel vortreten können und gibt jewals dann den Sieger an */
  function playRound(myPlay,computerPlay) {
     
-    if (myPlay == "PAPIER" && computerPlay =="STEIN" ) {
+    if (myPlay == "PAPER" && computerPlay =="STEIN" ) {
         
-        alert("You win, Papier beats Rock")
+        /* Bei diesem Vorfall wird meinPunkt mit 1 addiert und gibt jewals den Sieger in der Runde an und den zurzeitigen punktestand  */
+        meinPunkt++
+        alert("You win, Paper beats Rock") 
+        
+        alert("You won " + meinPunkt + " time/s")
+        
     }    
-    else if (myPlay == "PAPIER" && computerPlay == "SCHERE") {
+    else if (myPlay == "PAPER" && computerPlay == "SCHERE") {
 
-        alert("You lose, Papier loses against Scissors")
+        gegnerPunkt++
+        alert("You lose, Paper loses against Scissors")
+        
+        alert("Computer won " + gegnerPunkt + " time/s")
     } 
 
-    else if (myPlay == "STEIN" && computerPlay == "SCHERE") {
+    else if (myPlay == "STONE" && computerPlay == "SCHERE") {
 
-        alert("You win, Stone beats Scissors")    
+        meinPunkt++
+        alert("You win, Stone beats Scissors")   
+       
+        alert("You won " + meinPunkt + " time/s") 
     }
 
-    else if (myPlay == "STEIN" && computerPlay == "PAPIER") {
+    else if (myPlay == "STONE" && computerPlay == "PAPIER") {
         
+        gegnerPunkt++
         alert("You lose, Stone loses against Paper")    
+    
+        alert("Computer won " + gegnerPunkt + " time/s")
     }
 
-    else if (myPlay == "SCHERE" && computerPlay == "PAPIER") {
 
-        alert("You win, Scissors beats Paper")    
+    else if (myPlay == "SCISSORS" && computerPlay == "PAPIER") {
+
+        meinPunkt++
+        alert("You win, Scissors beats Paper")
+      
+        alert("You won " + meinPunkt + " time/s")    
     }
 
-    else if (myPlay == "SCHERE" && computerPlay == "STEIN") {
+    else if (myPlay == "SCISSORS" && computerPlay == "STEIN") {
+        gegnerPunkt++
         alert("You lose, Scissors loses against Stone")
+        
+        alert("Computer won " + gegnerPunkt + " time/s")     
+   
     }
 
-    else if (myPlay == "PAPIER" && computerPlay == "PAPIER") {
+
+    else if (myPlay == "PAPER" && computerPlay == "PAPIER") {
         alert("Tie, both of you chose Paper")
     }
 
-    else if (myPlay == "STEIN" && computerPlay == "STEIN") {
+    else if (myPlay == "STONE" && computerPlay == "STEIN") {
         alert("Tie, both of you chose Stone")   
     }
 
-    else if (myPlay == "SCHERE" && computerPlay == "SCHERE") {
+    else if (myPlay == "SCISSORS" && computerPlay == "SCHERE") {
         alert("Tie, both of you chose Scissors")
     }
 
-    else alert("Input Error, You HAVE to use Scissor,Paper or Stone")
+    else  {
+    
+     alert("Input Error, You HAVE to use Scissor,Paper or Stone") 
+     i--
+     
+    }
 
 }
 

@@ -70,14 +70,15 @@ for (let i = 0; i < 5; i++) {
  }
 
 
-
-
-
-
-
 Was muss ich loopen?
 
 -Prompt anfrage
 -Math.random
 -play funktion
 
+Wie lang soll der loop dauern?
+
+- Bis 1 Spieler 5 Siege erreicht hat.
+
+
+Bei gewinn Punktzahl anzeigen loop unabhängig.
