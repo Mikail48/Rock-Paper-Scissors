@@ -12,11 +12,11 @@
 
 <script>
 
-alert("Win 5 times, " + "to win the Game!")    
+alert("Win 5 times, " + "to win the Game!")   
 
 let gegnerPunkt = 0
 let meinPunkt   = 0
-let i = 0 
+
 for (let i = 0 ; meinPunkt < 5; i++) {
 
 /* Bricht bei 5 punkt den Loop */
@@ -126,6 +126,17 @@ else computerPlay = "STEIN"
 playRound(myPlay,computerPlay)
 
 }
+
+if (meinPunkt == 5) {
+    alert("You won the Game!")
+}
+
+else if (gegnerPunkt == 5) {
+    alert("You lost the Game...")
+}
+
+
+
 </script>
 
 
